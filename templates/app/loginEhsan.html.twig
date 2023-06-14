@@ -1,0 +1,14 @@
+{% extends '@layout/default.html.twig' %}
+
+{% block title %}Ehsan Login{% endblock %}
+
+{% block content %}
+    <br><br><br><br><br><br><br><br>
+    <div style="min-height: 300px">
+        <form method="post" action="/loginEhsanSubmit/">
+            <input type="text" name="username" placeholder="Username">
+            <input type="password" name="password" placeholder="Password">
+            <input type="submit" value="Login">
+        </form>
+    </div>
+{% endblock %}

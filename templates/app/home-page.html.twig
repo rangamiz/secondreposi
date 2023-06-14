@@ -1,0 +1,74 @@
+{% extends '@layout/default.html.twig' %}
+
+{% block title %}
+homepage
+{% endblock %}
+
+{% block content %}
+    <div class="app-content">
+        <main class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h1>WELCOME</h1>
+            <p>TO INDUSTRYMACHINE</p>
+        </div>
+        <div class="col-md-8">
+                    <span>ARTBEN welcomes you to www.Industrymachine.de - your reliable partner in the field of industrial solutions.
+                    </span>
+        </div></div>
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>AKTION</h2>
+                    <img src="https://www.istockphoto.com/photos/cnc-machine" width=200px height="200px">
+                </div>
+            </div>
+        </main>
+            {% if containerName is defined %}
+                <p>
+                    <a href="{{ containerDocs }}" target="_blank">
+                        Get started with {{ containerName }}.
+                    </a>
+                </p>
+            {% endif %}
+
+        <div class="col-md-4">
+            <h2>
+                <a href="https://docs.mezzio.dev/mezzio/features/router/intro" target="_blank">
+                    <i class="fa fa-plane"></i> Routers
+                </a>
+            </h2>
+            <p>
+                One fundamental feature of mezzio is that it provides mechanisms for implementing dynamic
+                routing, a feature required in most modern web applications. Mezzio ships with multiple adapters.
+            </p>
+            {% if routerName is defined %}
+                <p>
+                    <a href="{{ routerDocs }}" target="_blank">
+                        Get started with {{ routerName }}.
+                    </a>
+                </p>
+            {% endif %}
+        </div>
+
+        <div class="col-md-4">
+            <h2>
+                <a href="https://docs.mezzio.dev/mezzio/features/template/twig" target="_blank">
+                    <i class="fa fa-edit"></i> Templating
+                </a>
+            </h2>
+            <p>
+                By default, no middleware in Mezzio is templated. We do not even provide a default templating
+                engine, as the choice of templating engine is often very specific to the project and/or organization.
+                However, Mezzio does provide abstraction for templating, which allows you to write middleware that
+                is engine-agnostic.
+            </p>
+            {% if templateName is defined %}
+                <p>
+                    <a href="{{ templateDocs }}" target="_blank">
+                        Get started with {{ templateName }}.
+                    </a>
+                </p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

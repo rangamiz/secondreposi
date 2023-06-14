@@ -1,0 +1,12 @@
+{% extends '@layout/default.html.twig' %}
+
+{% block title %}Shopping{% endblock %}
+
+{% block content %}
+<br><br><br><br><br><br>
+    Shopping
+    {% for product in products %}
+        {{ product.title }}
+    {% endfor %}
+    <br><br><br>
+{% endblock %}

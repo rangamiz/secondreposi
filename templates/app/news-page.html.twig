@@ -1,0 +1,21 @@
+{% extends '@layout/default.html.twig' %}
+
+{% block title %}
+    newspage
+{% endblock %}
+
+{% block content %}
+    <br><br><br><br><br><br><br><br>
+
+    <ul style="border-color: black">
+        {% for news in newses %}
+            {% for item in news.info %}
+                <li style="border-collapse: collapse">
+                    <h3>{{ dump(item) }}</h3>
+                </li>
+            {% endfor %}
+
+            {{ news.author.name }}
+        {% endfor %}
+    </ul>
+{% endblock %}
